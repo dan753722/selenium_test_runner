@@ -35,3 +35,7 @@ USER node
 RUN npm install chromedriver@2.36.0 -g
 RUN npm install https://gitlab.com/gitlab-org/gitlab-selenium-server.git -g
 
+RUN nohup chromedriver &
+RUN nohup selenium-gitlab-server &
+
+#ENTRYPOINT [ "chromedriver" ]
